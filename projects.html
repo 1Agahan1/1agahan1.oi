@@ -1,57 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Explore Agahan's projects in web development and design." />
-  <title>Projects - Agahan's Portfolio</title>
-  <link rel="stylesheet" href="portfolio.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Agahan's projects in web development and design." />
+    <title>Projects - Agahan's Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="portfolio.css">
 </head>
 <body>
-  <header>
-    <span class="logo">A</span>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html" class="active">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <section class="projects">
-      <h1>My Projects</h1>
-      <div class="project-list">
-        <div class="project-item">
-          <h2>HTML-Only Portfolio</h2>
-          <p>A minimalist portfolio to showcase my skills in HTML and design principles.</p>
-          <a href="html-portfolio.html" class="project-link">View Details</a>
+    <header id="main-header">
+        <span class="logo">A</span>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#projects" class="active">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="projects" id="projects">
+            <h2>My Projects</h2>
+            <div class="project-list">
+                <div class="project-item">
+                    <div class="project-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>React Calculator</h3>
+                    <p>A fully functional calculator built with React, featuring a clean interface and comprehensive arithmetic operations.</p>
+                    <div class="project-buttons">
+                        <a href="https://1agahan1.github.io/fcc-reactcalculator-d/" class="btn btn-primary" target="_blank">Live Demo</a>
+                        <a href="https://codepen.io/Dan-Williams-Nesortado/pen/NPKdrQO" class="btn btn-secondary" target="_blank">Source Code</a>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>25/5 Clock</h3>
+                    <p>A Pomodoro timer application that helps users manage their work and break sessions effectively.</p>
+                    <div class="project-buttons">
+                        <a href="https://1agahan1.github.io/fcc-25-5-Clock-d/" class="btn btn-primary" target="_blank">Live Demo</a>
+                        <a href="https://codepen.io/Dan-Williams-Nesortado/pen/raBjMgy" class="btn btn-secondary" target="_blank">Source Code</a>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-icon">
+                        <i class="fas fa-drum"></i>
+                    </div>
+                    <h3>Drum Machine</h3>
+                    <p>An interactive drum machine with keyboard controls and various sound effects, built using React.</p>
+                    <div class="project-buttons">
+                        <a href="https://codepen.io/Dan-Williams-Nesortado/full/RNbKpoQ" class="btn btn-primary" target="_blank">Live Demo</a>
+                        <a href="https://codepen.io/Dan-Williams-Nesortado/pen/RNbKpoQ" class="btn btn-secondary" target="_blank">Source Code</a>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-icon">
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                    <h3>Random Quote Machine</h3>
+                    <p>A dynamic quote generator that displays inspirational quotes with smooth transitions and social sharing.</p>
+                    <div class="project-buttons">
+                        <a href="https://codepen.io/Dan-Williams-Nesortado/full/NPKdrQO" class="btn btn-primary" target="_blank">Live Demo</a>
+                        <a href="https://codepen.io/Dan-Williams-Nesortado/pen/NPKdrQO" class="btn btn-secondary" target="_blank">Source Code</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/1agahan1" target="_blank" class="social-icon">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="#" target="_blank" class="social-icon">
+                <i class="fab fa-linkedin"></i>
+            </a>
         </div>
-        <div class="project-item">
-          <h2>Interactive Calculator</h2>
-          <p>A functional calculator for performing basic arithmetic operations with a sleek interface.</p>
-          <a href="calculator.html" class="project-link">View Details</a>
-        </div>
-        <div class="project-item">
-          <h2>Quiz App</h2>
-          <p>An engaging quiz app that evaluates user knowledge and displays personalized results.</p>
-          <a href="quiz-app.html" class="project-link">View Details</a>
-        </div>
-        <div class="project-item">
-          <h2>Countdown Timer</h2>
-          <p>An easy-to-use countdown timer ideal for managing deadlines and events.</p>
-          <a href="countdown-timer.html" class="project-link">View Details</a>
-        </div>
-        <div class="project-item">
-          <h2>Product Launch Page</h2>
-          <p>A visually appealing product launch page that showcases upcoming features and gathers user interest.</p>
-          <a href="launch-page.html" class="project-link">View Details</a>
-        </div>
-      </div>
-    </section>
-  </main>
-  <footer>
-    <p>&copy; 2024 Agahan | All Rights Reserved</p>
-  </footer>
+        <p>&copy; 2024 Agahan | All Rights Reserved</p>
+    </footer>
 </body>
 </html>

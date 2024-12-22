@@ -4,83 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Personal portfolio showcasing projects in web development and music by Agahan." />
-    <meta name="keywords" content="Frontend Project, HTML, Portfolio, Agahan" />
+    <meta name="keywords" content="Frontend Developer, HTML, Portfolio, Agahan" />
     <meta name="author" content="Agahan" />
-    <link rel="stylesheet" href="portfolio.css">
-    <link href="https://fonts.googleapis.com/css2?family=Rosarivo:ital@0;1&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <title>"Agahan's Portfolio"</title>
-    <link rel="noopener" href="projects.html"/>
-    <script src="portfolio.js"></script>
+    <link rel="stylesheet" href="portfolio-index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Agahan's Portfolio</title>
   </head>
   <body>
-    <header>
-      <span class="logo">AGAHAN</span>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-      <button class="toggle-theme" onclick="toggleTheme()">
-        <svg id="sun_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon">
-          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-        </svg>
-        <svg id="moon_icon" style="display: none;" xmlns=" http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun">
-          <circle cx="12" cy="12" r="5"></circle>
-          <line x1="12" y1="1" x2="12" y2="3"></line>
-          <line x1="12" y1="21" x2="12" y2="23"></line>
-          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-          <line x1="1" y1="12" x2="3" y2="12"></line>
-          <line x1="21" y1="12" x2="23" y2="12"></line>
-          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-        </svg>
-      </button>
-    </header>
     <main>
-      <section class="intro">
-        <h1>About Me</h1>
-        <div class="intro-content">
-          <div class="selfie">
-            <img src="path_to_your_selfie.jpg" alt="Selfie">
-          </div>
-      
-          <div class="intro-text">
-            <p>Hello! I'm Agahan, a passionate web developer. I'm currently working on various projects to showcase my skills in HTML, CSS, JavaScript, and design principles.</p>
-          </div>
-      
-          <div class="education-certificates">
-            <h2>Education</h2>
-            <ul>
-              <li>San Jose High School - Graduated</li>
-              <li>Alanao Elementary School - Completed</li>
-            </ul>
-      
-            <h2>Certifications</h2>
-            <ul>
-              <li>Frontend Web Development Certification - Coursera</li>
-              <li>JavaScript Basics - freeCodeCamp</li>
-            </ul>
-          </div>
-
-          <div class="skills">
-            <h2>Skills</h2>
-            <ul>
-              <li>HTML, CSS, JavaScript</li>
-              <li>Responsive Web Design</li>
-              <li>Web Accessibility</li>
-              <li>Version Control (Git/GitHub)</li>
-              <li>Music Composition and Arrangement</li>
-            </ul>
-          </div>
+      <section id="home" class="intro">
+        <div class="intro-text">
+          <h1>Frontend Developer</h1>
+          <p>I craft solid, scalable frontend products with great user experiences. Skilled at progressive enhancement, design systems, and UI Engineering.</p>
+        </div>
+        <div class="selfie">
+          <img src="images/selfie.jpg" alt="Selfie of Agahan" onerror="this.src='images/placeholder.jpg'"/>
         </div>
       </section>
       
+      <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>Hi, I'm Agahan, a passionate frontend developer and music enthusiast. With a keen eye for detail, I bring designs to life, focusing on interactive user experiences. Whether coding or composing, I explore creative outlets to express my ideas.</p>
+      </section>
+
+      <section id="education" class="education">
+        <h2>Education</h2>
+        <ul>
+          <li><strong>Elementary School:</strong> Alanao Elementary School</li>
+          <li><strong>High School:</strong> San Jose High School</li>
+        </ul>
+      </section>
+
+      <section id="certificates" class="certificates">
+        <h2>Certificates</h2>
+        <ul>
+          <li>Certificate in Web Development Fundamentals</li>
+          <li>HTML and CSS Mastery Certification</li>
+        </ul>
+      </section>
+
+      <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <ul>
+          <li>Frontend Development (HTML, CSS, JavaScript)</li>
+          <li>UI/UX Design</li>
+          <li>Responsive Web Design</li>
+          <li>Data Entry and Accuracy</li>
+        </ul>
+      </section>
+      
+      <section id="projects" class="projects">
+        <a href="projects.html" class="projects-btn">My Projects</a>
+      </section>
+      
+      <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out if you'd like to collaborate or learn more about my work!</p>
+        <form id="contactForm" action="#" method="post">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" placeholder="Your Message" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </section>
     </main>
+
+    <button id="scrollToTopBtn" class="scroll-to-top" aria-label="Scroll to top">↑</button>
+
     <footer>
       <p>&copy; 2024 Agahan | All Rights Reserved</p>
     </footer>
+
+    <script src="portfolio.js"></script>
   </body>
 </html>
