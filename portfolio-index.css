@@ -1,4 +1,3 @@
-/* Root variables and reset */
 :root {
     --primary-color: #3498db;
     --secondary-color: #2ecc71;
@@ -77,21 +76,52 @@ section.visible {
     transform: translateY(0);
 }
 
-/* Intro section */
+/* Intro section and animated background */
 .intro {
+    position: relative;
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 10%;
     background: linear-gradient(135deg, #fff 0%, var(--bg-color) 100%);
-    position: relative;
     overflow: hidden;
+}
+
+.animated-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.1) 0%, rgba(46, 204, 113, 0.1) 100%);
+    z-index: 1;
+}
+
+.animated-dots {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.dot {
+    position: absolute;
+    background: var(--primary-color);
+    border-radius: 50%;
+    opacity: 0.15;
+    transition: transform 0.3s ease;
+    pointer-events: none;
+    animation: float 3s ease-in-out infinite;
+    animation-delay: calc(var(--delay) * 1s);
 }
 
 .intro-text {
     flex: 1;
     max-width: 600px;
+    position: relative;
+    z-index: 2;
     animation: fadeInUp 1s forwards;
 }
 
@@ -107,6 +137,8 @@ section.visible {
     overflow: hidden;
     border: 4px solid white;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
     animation: floatAnimation 3s ease-in-out infinite;
 }
 
@@ -159,19 +191,31 @@ section.visible {
     list-style: none;
     max-width: 800px;
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
 }
 
 .certificates li {
-    padding: 1rem;
+    padding: 1.5rem;
     margin-bottom: 1rem;
     border-left: 4px solid var(--primary-color);
     background: var(--bg-color);
-    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    border-radius: var(--border-radius);
     transition: var(--transition);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.certificates li a {
+    text-decoration: none;
+    color: var(--text-color);
+    display: block;
+    font-weight: 500;
 }
 
 .certificates li:hover {
     transform: translateX(10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* Skills section */
@@ -333,6 +377,18 @@ footer {
     }
     50% {
         transform: translateY(-20px);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
     }
 }
 
