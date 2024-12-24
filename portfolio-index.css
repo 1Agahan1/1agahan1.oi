@@ -23,11 +23,6 @@ body {
     line-height: 1.6;
     background-color: var(--bg-color);
 }
-
-main {
-    overflow-x: hidden;
-}
-
 /* Typography */
 h1, h2, h3 {
     font-family: var(--header-font);
